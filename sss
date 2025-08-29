@@ -1,0 +1,1432 @@
+[33m1e6b2de[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mpgtbl[m[33m, [m[1;31morigin/pgtbl[m[33m, [m[1;31mmyrepo/pgtbl[m[33m)[m pgtbl lab: initial commit
+[33ma1da53a[m[33m ([m[1;31morigin/riscv[m[33m)[m update
+[33m8ca56e9[m memmove(dst, src, 0) leads to overflow in `while(n-- > 0)` as `n` is uint64 (thanks Matúš Jókay <matus.jokay@stuba.sk>)
+[33mbf4816c[m Delete unused code (Jude Rich <juder11@gmail.com>)
+[33m02424b1[m update
+[33ma103113[m fix ld warning: undefined symbol _entry
+[33m840aae8[m die
+[33me07ca66[m comment
+[33m19ff379[m exec() only accepts MAXARG arguments
+[33m9195142[m Assert that the size in mappages() is always positive
+[33mf55def8[m Change `inode cache` in main.c to `inode table`
+[33mdd6d5d0[m I fixed a typo in the comment.
+[33m49f1e2f[m fix a invalid printf format string
+[33m1226b09[m Remove setproc prototype
+[33mf524198[m fix comment for 'sepc'
+[33m8d4ff0b[m fix typos in user/usertest.c & kernel/log.c
+[33m9655f71[m Configure PMP at boot
+[33m6de0381[m check for alignment just once
+[33m3b3f83f[m check that there's no panic if user process tries to write >= MAXVA
+[33m08c9eda[m sync usertests
+[33m1841baa[m keep usertests.c in sync with riscv-sol-2020
+[33m077323a[m Rename icache to itable
+[33m6e3f75c[m suppress an incorrect error message in grind
+[33m231c08d[m Merge remote-tracking branch 'refs/remotes/origin/riscv' into riscv
+[33m60b63b9[m x
+[33mef97f65[m kill/status test
+[33mb4c2851[m Be principled: acquire lock first
+[33m38084bc[m proc_tree_lock -> wait_lock
+[33mba8d9f4[m don't over-lock in exit()
+[33m9599a8e[m x
+[33md7b308f[m kill/status test
+[33mb63d350[m Be principled: acquire lock first
+[33m774288e[m proc_tree_lock -> wait_lock
+[33mbc943c2[m don't over-lock in exit()
+[33m47323c9[m oops
+[33m2875069[m Frans' proc_lock.
+[33mb48ea5d[m free proc if kalloc fails
+[33m5e39253[m hopefully make writei more correct
+[33me1bb4c7[m test for closed pipe or killed on every char, not just if pipe full
+[33m329935e[m fix uart.c to work with UART_TX_BUF_SIZE == 1
+[33m13dccb0[m consolewrite does not need cons.lock -- can lead to sleep() with lock held
+[33m7dea4b9[m oops
+[33m8d4fbc6[m Frans' proc_lock.
+[33maf570f5[m free proc if kalloc fails
+[33md7c0a1b[m hopefully make writei more correct
+[33m147855e[m test for closed pipe or killed on every char, not just if pipe full
+[33m4df1a26[m fix uart.c to work with UART_TX_BUF_SIZE == 1
+[33m55ad99f[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m286b2f3[m consolewrite does not need cons.lock -- can lead to sleep() with lock held
+[33m05a7db1[m Fix minor typos
+[33md4cecb2[m kvmmake() makes a complete kernel page table, matching Figure 3.3
+[33m21cfc97[m set riscv use-compressed-breakpoints yes
+[33m9337861[m Fix minor typos
+[33mc64aa44[m kvmmake() makes a complete kernel page table, matching Figure 3.3
+[33m806580d[m set riscv use-compressed-breakpoints yes
+[33mbebecfd[m more explicable scratch area size for machine-mode timer interrupts
+[33mc199afe[m Don't map the CLINT, since it never used in the kernel in supervisor mode
+[33mc61cc69[m eliminate virtio DMA into kernel stacks.
+[33m3092fe2[m improve virtio_disk comments; bring it closer to wording in the spec
+[33m548ffc9[m don't unpin if recovering -- the resulting negative refcnt suppresses next unpin
+[33maeaf610[m avoid deadlock by disk intr acking interrupt first, then processing ring
+[33m3c70be9[m often causes deadlock after a few minutes
+[33m6c16759[m more explicable scratch area size for machine-mode timer interrupts
+[33m0c55849[m Don't map the CLINT, since it never used in the kernel in supervisor mode
+[33ma9b3dd4[m eliminate virtio DMA into kernel stacks.
+[33m271d89a[m improve virtio_disk comments; bring it closer to wording in the spec
+[33mda002a4[m don't unpin if recovering -- the resulting negative refcnt suppresses next unpin
+[33m792d60e[m avoid deadlock by disk intr acking interrupt first, then processing ring
+[33me3672e0[m often causes deadlock after a few minutes
+[33m9c8d1e2[m Fix minor typos
+[33mf2827b2[m Clarify CLINT and PLIC acronym
+[33m8ffdfad[m Add s to many printf statements that expect it (thanks Cece Chu) Add dirtest to the list of tests
+[33m6750608[m When either_copyin/out fails, return an error from write/read
+[33m8c67f96[m better grind error messages
+[33mb9359c3[m Corrects order of UART RX/TX interrupt enable bits
+[33mb965474[m Fix minor typos
+[33mb418a34[m Merge pull request #25 from matth79/patch-1
+[33m1c4b582[m Clarify CLINT and PLIC acronym
+[33md9c7b13[m Add s to many printf statements that expect it (thanks Cece Chu) Add dirtest to the list of tests
+[33m788b4d1[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m05074ba[m When either_copyin/out fails, return an error from write/read
+[33m6781ac0[m Corrects order of UART RX/TX interrupt enable bits
+[33m2055fe1[m better grind error messages
+[33me23d53f[m Delete doc dir because they take much space in student submissions
+[33m79899c7[m Delete doc dir because they take much space in student submissions
+[33m490f91a[m move panicked check to uart.c
+[33m748809e[m suppress write() output after panic()
+[33mde434fd[m Remove obselete ifdef that shouldn't have been there ever
+[33m0b4e78f[m fix usertests to pass all the riscv-sol-fall20 solutions.
+[33mffb2ee0[m move panicked check to uart.c
+[33mdb067d2[m suppress write() output after panic()
+[33m2ec9c6e[m Remove obselete ifdef that shouldn't have been there ever
+[33md7e5f26[m fix usertests to pass all the riscv-sol-fall20 solutions.
+[33m0bb2533[m Adjust a few prototypes to be explicit that they don't take arguments
+[33m2a4a876[m touch sbrk()-allocated memory to make sure it exists
+[33m5860dcd[m usertest for exec() out of memory recovery and fix a few exec() bugs
+[33md4d4877[m Use the major number defined in file.h.  The minor number is ignored; might as well use 0.
+[33m3c25112[m Delete some obselete stuff
+[33mefaa7b8[m Adjust a few prototypes to be explicit that they don't take arguments
+[33m59a9863[m touch sbrk()-allocated memory to make sure it exists
+[33maefa269[m usertest for exec() out of memory recovery and fix a few exec() bugs
+[33mb33574d[m Use the major number defined in file.h.  The minor number is ignored; might as well use 0.
+[33m740d363[m Delete some obselete stuff
+[33m95dad4c[m x
+[33mf2ec677[m fix a bug in the out-of-memory handling code in exec
+[33m8dc71a2[m handle another out-of-memory in fork(). the policy here is not consistent, since other calls (e.g. exec()) panic on out of memory.
+[33mbc51626[m try to handle a few of the possible out-of-memory errors in fork()
+[33ma8dd44c[m modify uvmunmap() to be in aligned pages fix a bug in fork() recovering from out of memory
+[33me283514[m pa isn't needed in the uvmunmap() loop
+[33mb154cf0[m x
+[33m4a87a0a[m fix a bug in the out-of-memory handling code in exec
+[33madee82c[m handle another out-of-memory in fork(). the policy here is not consistent, since other calls (e.g. exec()) panic on out of memory.
+[33m4c22c54[m try to handle a few of the possible out-of-memory errors in fork()
+[33m70c6fe8[m modify uvmunmap() to be in aligned pages fix a bug in fork() recovering from out of memory
+[33me1a2cd5[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33md32eac3[m pa isn't needed in the uvmunmap() loop
+[33m56e7ceb[m Update to the latest specs
+[33m315c37c[m Update to the latest specs
+[33m4689467[m copyright and 6.S081
+[33m84dcf8a[m copyright and 6.S081
+[33mfa71d7f[m Ack bug finders.
+[33m5dace67[m Typo (thanks yt <jaichenhengjie@qq.com>)
+[33m737bd3a[m Ack bug finders.
+[33m2db95f0[m Typo (thanks yt <jaichenhengjie@qq.com>)
+[33mf14aa42[m Generate initcode without compressed extensions
+[33mc248447[m update initcode to avoid using the compressed extension
+[33m9eff4b0[m Write interrupt ack register in virtio_disk_intr()
+[33mb557e7c[m Update ramdisk.c
+[33mffcb883[m Fix minor typos
+[33m96a20b0[m Generate initcode without compressed extensions
+[33m0502342[m Merge pull request #9 from d0iasm/riscv
+[33m93ca555[m Merge pull request #10 from takahirox/VirtioInterruptAck
+[33m12c131d[m Merge pull request #8 from rui314/cat-fix
+[33md28c5d9[m Merge pull request #6 from jrrk2/riscv
+[33m6b593b9[m Merge pull request #4 from 4ge32/riscv
+[33mc31d35d[m Merge branch 'riscv' into riscv
+[33md8fe177[m test string system call arguments that cross over the end of the last page.
+[33m76d6c57[m test copyinstr()'s handling of the terminating null
+[33me3b7058[m streamline copyin/copyout code in usertests fix bugs in read/write return values when there's an error
+[33ma93321c[m test pointer checking in copyin, copyout, copyinstr
+[33m1f55519[m Change tf -> trapframe in a few comments
+[33m7f35d7a[m modify each page in usertests countfree() get rid of static for walk() and freewalk()
+[33m2ae9c8e[m defines for UART register bits
+[33m0f50e95[m fix printf() in interrupts
+[33m27057bc[m interrupt-driven uart output, hopefully a nice example for teaching.
+[33m1e72d5c[m cpu->scheduler -> cpu->context to reduce confusion
+[33m5494c91[m rename p->tf to p->trapframe, for consistency with p->context
+[33m82981fa[m drop QEMUEXTRA
+[33maf9eb91[m make "echo hello > x" truncate file x.
+[33m672217a[m allow more files
+[33mb62d4d4[m more grind
+[33m897f6f3[m yet another toolchain name
+[33m6cb6764[m test string system call arguments that cross over the end of the last page.
+[33m234391b[m test copyinstr()'s handling of the terminating null
+[33m354adfd[m streamline copyin/copyout code in usertests fix bugs in read/write return values when there's an error
+[33mf01b1a8[m test pointer checking in copyin, copyout, copyinstr
+[33me4b9346[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m8b9b799[m modify each page in usertests countfree() get rid of static for walk() and freewalk()
+[33m6c3099d[m Change tf -> trapframe in a few comments
+[33m050a696[m defines for UART register bits
+[33mdb0f092[m fix printf() in interrupts
+[33m8238640[m interrupt-driven uart output, hopefully a nice example for teaching.
+[33m3b053f5[m cpu->scheduler -> cpu->context to reduce confusion
+[33md6dad42[m rename p->tf to p->trapframe, for consistency with p->context
+[33m7a7cd1a[m drop QEMUEXTRA
+[33mf3979b7[m make "echo hello > x" truncate file x.
+[33m7a5fcb2[m Write interrupt ack register in virtio_disk_intr()
+[33m8b05265[m update initcode to avoid using the compressed extension
+[33m4cf0b09[m cat should exit normally if reading from stdin
+[33m2b040aa[m Update ramdisk.c
+[33mc98e1af[m allow more files
+[33m507028d[m more grind
+[33md1b8b19[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m20f1dd9[m more grind
+[33m73e931f[m yet another toolchain name
+[33m16b3b63[m grind: run parallel system calls forever
+[33m028af27[m mention LRU list a bit more in comments.
+[33m9de9211[m usertests -c to repeat tests forever detect memory leaks no more "already ran user tests"
+[33me7ffb74[m fix a potential memory leak
+[33md9160fb[m nits
+[33mf2ab0eb[m Clean up linker script
+[33m90eb90b[m Fix minor typos
+[33m2821d43[m nits
+[33mf2df0fa[m Fix ulib's memmove to handle overlap when src<dst
+[33m8509784[m Add implementations of memcmp and memcpy to ulib
+[33ma52d296[m delete alarmtest from riscv
+[33m56583b1[m updated alarmtest
+[33m78f863f[m Add editorconfig
+[33md441674[m Make QEMU memory size match PHYSTOP
+[33mdeaff5d[m no buf->qnext
+[33m9ead904[m fix major validation
+[33m37df68e[m story is more complex than I thought.
+[33md175bea[m bug fix: reparent() sometimes deadlocked bug fix: exit() sometimes released a different parent lock than it acquired usertests
+[33m843ce77[m Stress copyin for the full allocated page (good for lazy lab).
+[33md940fd1[m don't leak memory if exec() arguments are invalid.
+[33m6b79ee6[m Refactor big sbrk test in smaller, easier-to-understand tests
+[33mee67dbd[m Not much: factor sbrksimple from big sbrktest
+[33m7c7ed20[m don't leak a file system block if the buf argument to write is invalid and a usertest
+[33me1a3730[m yet another sbrk() bug fix, and usertest
+[33m4de161f[m don't panic if a program frees all its memory with sbrk(). if a program sbrk()'s to a non-page-boundary, don't free that page. corresponding usertests.
+[33mca30cac[m more incorrect cast to uint
+[33m402e7b5[m fix a potential kernel crash add a regression test for it
+[33m57e40a0[m nits
+[33mba1c428[m print name at start of test
+[33m25e6803[m a comment
+[33m3f6e372[m make exec test self contained
+[33mf6a37c1[m Standarize the way tests are run and report errors Support running one test, by specifying the name as a command argument to usertests
+[33m0d01de2[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m2df4235[m all of PTE_FLAGS
+[33mb150908[m add `-bios none' to silence qemu
+[33m036b5ed[m set architecture riscv:rv64 -- fix gdb trampoline disassembly, thanks jonathan
+[33m35010f0[m error exit status is 1
+[33m7e6c37e[m Support exit status for exit/wait One test case for returning a exit status Passes usertests, but haven't used it to simplify tests
+[33m035cca9[m Make the end variable be really at the end of bss, and delete + 4096 in freerange()
+[33me5b7fa6[m thanks to Anthony Coulter
+[33mfc337af[m fix a grep bug
+[33mc0beecc[m have echo use FD 1 for clarity
+[33m25e1131[m sfence.vma in trampoline as well
+[33m9b9e2dd[m fix sfence_vma comment
+[33m86a1d4b[m sfence_vma after satp
+[33m64b93d1[m user printf(1 -> printf(
+[33ma3f6d9f[m cow moved to xv6-riscv-fall19
+[33m92c3c02[m RISC-V port doesn't borrow this code
+[33m510bcde[m Add major/minor/mkdev Maybe apply this change to master
+[33m7241838[m Move labs into 6.828 repo. The lab text isn't dependent on specific xv6 code. Lab submission instructions etc. are likely going to be more MIT 6.828 specific.
+[33mc612d45[m validateint doesn't test something interesting on RISC-V; delete it.
+[33mb564fca[m Rationalize some constants in usertests
+[33md98ddad[m Also release buffer on failed copyout
+[33m6005ef5[m Release buffer also when copyin fails
+[33md9818b8[m 512 -> BSIZE
+[33ma825f22[m Merge remote-tracking branch 'origin/master' into riscv
+[33m82638c0[m Avoid rereading the superblock in bfree
+[33m21ad8c7[m A few now unused DOC
+[33mce565ae[m dan cross
+[33me10f797[m Merge remote-tracking branch 'origin/master' into riscv
+[33m0581c37[m Removed unused `dirlookup` argument in `create`
+[33m2501560[m Cosmetic cleanup: fsinit reads sb and calls loginit. initialize icache in main.c and don't make it disk specific; the icache is shared.  This doesn't matter since we have only one disk, but conceptually cleaner and maybe helpful to students for mount lab.
+[33ma995323[m x
+[33me61377b[m Update write up to reflect new test cases.
+[33m5498ee2[m Draft mount/umount lab as an alternative lab for fs.html
+[33me398a98[m Wrap state of disk driver in a struct so that it is easier to support several disks (e.g., in a mount lab).
+[33md96a8c5[m add alarmtest.c to the repository they don't have to modify alarmtest.c, so we can use the original version to test, to make it harder to cheat.
+[33mdeec67f[m alarm stuff
+[33mfdea265[m two notes
+[33m564d10b[m Add simple crash recovery assignment to fs lab
+[33mc5163e4[m nits
+[33m3bee885[m some XXX questions
+[33me788af9[m oops, back to alarm()
+[33m0b5c01d[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m9110f40[m sigalarm
+[33m7510ac7[m Combine the linux mmap hw with memory-mapped files in xv6 into a separate lab
+[33m0c10cbe[m syscall lab nits
+[33m0c3125b[m Add uthread
+[33mb02ef59[m x
+[33m62ece4b[m Merge branch 'riscv-bcache' into riscv
+[33mfb8a009[m fences for starting
+[33m77da01a[m First draft of text for mmap assignment.
+[33md600026[m cut ramdisk
+[33mb70cd9e[m Import big file assignment.
+[33m9c4f62e[m x
+[33m848d190[m Track in buf if disk "owns" buffer
+[33m87183da[m An easier version of bcache assignment
+[33mf37a3e3[m Make pin/unpin explicit
+[33mf1bb53c[m The driver should free descriptors, not interrupt handler.  This avoids handler freeing descriptors before driver sees that the request has completed.
+[33m5304310[m Remove B_DIRTY Use refcnt to pin blocks into the cache Replace flags/B_VALID with a boolean field valid Use info[id].status to signal completion of disk interrupt Pass a read/write flag to virtio_disk_rw
+[33m3498038[m checkpoint
+[33m005773c[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m47b9cfe[m separate out timer init code for clarity
+[33m1ec50c5[m xxx
+[33m33494ed[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m2d89a10[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33m6507da7[m argptr no longer needed, since copyin checks
+[33mfe14bd1[m a thought
+[33mbdcd23e[m a bit more
+[33md82f43e[m Checkpoint start of locking lab
+[33m629faaf[m cleaner UART register interface
+[33ma33f60f[m console/uart tweaks
+[33mcf48b24[m beautify console.c
+[33m281d450[m split printf into a separate file, to make console.c more like a driver
+[33m734faa2[m Pass over lab text
+[33mcc1a303[m fetchint isn't used any more
+[33mf0987d8[m ???
+[33m8ec873b[m Checkpoint: split alarmtest exercise in two exercises
+[33mc714e3e[m machinevec -> timervec
+[33mfa2e2e3[m uservec before userret in trampoline, to match book and kernelvec
+[33m8d30e21[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33mea95a66[m trampin -> uservec trampout -> userret
+[33m0358ee9[m syscall lab/alarm
+[33m57a861b[m Checkpoint start syscall lab
+[33m808811f[m Add syscall tracing to the first xv6 lab
+[33mc0b1c23[m x
+[33m47c9721[m a few name changes in panic msg
+[33m8c12928[m First draft of first lab assignment?
+[33m4e62de6[m fix an exit/exit deadlock -> one more locking protocol violation increase timer rate from 1/second to 10/second
+[33mb19adf7[m purge x86 stuff from defs.h
+[33m5d5e4e0[m comments for timer setup
+[33maef3e0f[m sieve exercise
+[33m61dc67b[m Simple find assignment
+[33m9a817bd[m rationalize some vm function names
+[33mda898a1[m ???
+[33m5d75346[m find
+[33m711bd31[m Checkpoint some warm-up exercises
+[33ma77287e[m no more PAGEBREAK
+[33mb4f89bb[m ping-pong exercise
+[33m8f6865d[m display assembly instructions, to help with first.tex exercise
+[33m49db511[m x
+[33m26ce97f[m One more
+[33me627608[m Delete a few other no-longer relevant files
+[33m6f3a441[m Remove a few no longer relevant files
+[33mdfc2cf9[m add rtm's cow lab
+[33ma41365f[m Add relevant docs to repo
+[33m0387e21[m Add a few sbrktest for lazy allocatioin lab
+[33m936afc6[m mstart -> start
+[33m54178ad[m simplify kernel mapping calls
+[33m55bc96d[m a few core -> CPU get rid of PDF generating support
+[33mb8a31c4[m one more TRAMPOLINE
+[33m6c78af4[m fix mapkstack
+[33m62091ab[m Test whether writing below stack fails
+[33mb2e9c8e[m Clear U bit for second stack page so that it functions as a guard page
+[33m38b4306[m nit
+[33m6b379e4[m -MD and TRAPFRAME
+[33m5eab649[m Allocate 2 pages per proc, with the top one unmapped. The page below the last proc is unmapped by default (because the kernel doesn't map anything right below the kernel stacks).
+[33mc5d48db[m Merge branch 'riscv-kstack' into riscv
+[33m328204d[m not much
+[33m06e49a5[m pi for pipe, rather than p, to avoid confusion with proc's p->lock
+[33m3333665[m not much
+[33m2418ac3[m it's not clear that the release will always enable interrupts
+[33m0610990[m x
+[33mdbd729b[m with per-proc locks, we don't need the intr_on() inside the loop.
+[33m32168df[m no need to save/restore 14
+[33m9156632[m One way of supporting a guard page below kstack: allocate kstacks in procinit() and map them high up (below TRAMPOLNE) with an empty mapping below each stack.  Never free a kernel stack.
+[33mb924e44[m Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+[33mce53416[m Delete x86 comment
+[33mebc3937[m conservatively call sfence.vma before every satp load.
+[33m6bbc2b2[m cosmetic changes
+[33m7797a38[m another test, to help with locking exercises
+[33m4bc900e[m nits
+[33me6addf2[m feeble attempt at build instructions
+[33m061e3be[m more comment cleanup
+[33mc0266a8[m document which proc fields are protected by p->lock
+[33m5eb1685[m have kill() lock before looking at p->pid document wait()'s use of np->parent w/o holding lock.
+[33m9981bb2[m tweak some comments.
+[33m2f22a3e[m Merge branch 'riscv-proc' into riscv
+[33m60ed537[m Merge branch 'riscv-proc' of g.csail.mit.edu:xv6-dev into riscv-proc
+[33m9d34838[m holding p->lock all the way through state=RUNNABLE means we don't need EMBRYO
+[33madcc612[m Update runoff list for producing xv6.pdf
+[33mdb72f31[m eliminate ptable. ptable.lock -> pid_lock.
+[33m4ce3a5f[m nits
+[33mc4f6a24[m avoid a double-lock of initproc->lock if child of init is reparenting
+[33m7114bf4[m Merge branch 'riscv-proc' of g.csail.mit.edu:xv6-dev into riscv-proc
+[33m62313be[m another fork test
+[33mdabbc34[m Maybe fix two races identified by rtm (thx!):
+[33m75b0c6f[m back-port fork/exit/exit tests to xv6-riscv
+[33mbe88bef[m two exit/exit tests
+[33mfab5e7c[m Make size in stat.h be a uint64 Supporting print long using %l (a bit of cheat) Modify ls to print size using %l We should probably update size in inode too.
+[33m6bfb078[m x
+[33m47e6925[m Simplify wakeup1
+[33mcee830a[m Apply some corresponding bug fixes from wq branch here
+[33mccf2998[m Remove some debugging code
+[33m26f3061[m Fix a lost wakeup bug: the disk driver's wakeup() can run after the reading process acquired p->lock and released virtio lock in sleep(), but before the process had set p->status to SLEEPING, because the wakeup tested p->status without holding p's lock.  Thus, wakeup can complete without seeing any process SLEEPING and then p sets p->status to SLEEPING.
+[33m1e4d706[m Merge branch 'riscv' into riscv-proc
+[33m84c759f[m x
+[33m37ac6f8[m Don't start processes at the end of the proc table
+[33mda51735[m Avoid two cores selecting the same process to run
+[33mf59c1bf[m try to continue from walk() failing to allocate a page-table page
+[33mb27f275[m avoid allocproc() returning a struct proc with non-zero p->sz
+[33m1540c8b[m COW tests
+[33m67702cf[m Checkpoint switching to per-process locks, in attempt clarify xv6's locking plan, which is a difficult to understand because ptable lock protects many invariants.  This implementation has a bug: once in a while xv6 unlocks a proc lock that is locked by another core.
+[33m40f1041[m don't enable interrupts until done with sstatus, scause, &c
+[33m535ac52[m oops, don't hold mycpu() result across intr_off()
+[33mabfe999[m have fork() fail, not panic, if not enough phys mem
+[33m18e76a6[m sbrk() returns a pointer, so it should be 64 bits
+[33m9b99f00[m oops, don't hold mycpu() result across intr_off()
+[33m0498bfd[m timer interrupt in the kernel -> yield
+[33mc34bd3d[m Checkpoint some progress compiling xv6.pdf
+[33m2c0338f[m x
+[33maf6c35e[m Introduce alloc3_desc and UsedArea to make code easier to read
+[33ma8305b7[m FD_DEVICE
+[33m46744c4[m for spinlocks, use gcc intrinsics, but say what they compile to
+[33mca39672[m clean up virtio code
+[33m4adf016[m eliminate ramdisk
+[33mde9d72c[m virtio disk driver
+[33m5753553[m separate source into kernel/ user/ mkfs/
+[33m91ba811[m gdb backtraces: -ggdb, -fno-omit-frame-pointer, BSIZE=1024
+[33m8607051[m fix a create()/unlink() deadlock
+[33m31ef85f[m add plic.c
+[33mb05bcce[m add kernelvec
+[33mdff7ab3[m make -O work with asm volatile(...)
+[33m5684556[m clean up -Wall
+[33m5eb1cb4[m push_off() and pop_off() in myproc()
+[33m3113643[m spinlocks using gcc intrinsics push_off() / pop_off() set up per-hart plic stuff so all harts get device interrupts
+[33mf1a727b[m start at support for multiple CPUs
+[33mec3d3a1[m yield if timer interrupt all user tests passed
+[33ma827725[m timer interrupts -> supervisor software interrupt
+[33mcff3ce6[m more sbrk fixes
+[33m0e131b2[m fix a problem with end. make uartputc() wait until h/w is ready.
+[33mb78894f[m check that arguments aren't more than a page in exec()
+[33m0f684b9[m fix exec argc
+[33m8baac76[m support read() and write() bigger than one page
+[33mcefe223[m console input and sbrk
+[33mefecbee[m xx
+[33m6eae1be[m push/pop all registers when handling interrupt from kernel
+[33me630e07[m xx
+[33ma9c1a6f[m takes one uart input interrupt, then panics
+[33m50cbc75[m first shell prints $ prompt, though no console input yet
+[33m7fd1f1e[m exec compiles but argstr() doesn't work yet
+[33m5d34fa2[m -initrd fs.img, ramdisk.c, file system
+[33m2ec1959[m fork/wait/exit work
+[33m0f90388[m No T_SYSCALL
+[33ma7ca32e[m Change mycpu() to use %gs.
+[33m821ee3f[m not much
+[33m54e6f82[m Separate system call path from trap path.  Passes usertests on 1 and 2 cpus.
+[33mf241e67[m x
+[33m704775b[m Make names line up with text
+[33m2fa3a8f[m Oops, didn't commit these changes with last commit
+[33ma7ef9a4[m x
+[33m7ccc5f5[m Names of text are better.
+[33meb72653[m use x86-64 names
+[33m23a5837[m Switch back bpmain back to main
+[33m020fc6a[m don't care about bootloader
+[33m343080f[m Remove unused typedefs
+[33mec11014[m simplify layout pic
+[33ma0389f7[m Remove now unused PDX
+[33md448fd5[m Simplify by freeing user part of addres pace in one page increments.  This undoes commit ffe444 and 052e18, which skipped page directories, but was tailored to two-level page table.  Undoing doesn't seem to affect boottime for xv6 visibly.
+[33ma42b7d5[m Simplify freeing page table
+[33m155c13b[m Avoid repition in walkpgdir
+[33m572e106[m x
+[33m3bfcaea[m Make sysexit and trapret paths the same, so that forkret can return through either path.  This helped tracking down a bug: use 144 instead of 32 to find cs in trapframe so that gs is correctly saved and restored.
+[33m3229906[m x
+[33mab0db65[m Checkpoint port of xv6 to x86-64.  Passed usertests on 2 processors a few times.
+[33mb818915[m Update name Use generic 6.828 url (without year)
+[33m308a3b8[m thanks tyfkda
+[33m3432551[m thanks Wolfgang Keller
+[33m80f70c4[m x
+[33m1d19081[m Allow holding to be called with interrupts enabled (for Mark Morrissey).
+[33m2c73068[m Delete a patch Adjust typesetting of code
+[33me559fd2[m x
+[33mf304887[m x
+[33m76d4005[m thanks mtasm
+[33m6710e55[m thanks wxdao
+[33m96e4e2f[m thanks eyalz800
+[33m8f63bea[m vectors.pl is executable and asks shell for perl
+[33m171c2cc[m thanks mataness
+[33m26108a3[m thanks tyfkda
+[33m7f3528b[m x
+[33m210a0f0[m Remove unused flags (thanks Wolfgang Keller)
+[33mb2ca8e3[m x
+[33m960a94f[m x
+[33m0b86d03[m Because sleeplocks replaced B_BUSY the holding test can be more specific (thanks Mark Morrissey)
+[33m0b6f4c0[m x
+[33m0754d21[m stricter log consumption by write()
+[33m1ab2317[m improve swtch comment
+[33m4638cab[m fix runoff complaints about pagination and long lines
+[33m164f4ba[m thx
+[33m3e392c7[m Update comment to reflect xv6 doesn't have per-cpu segments anymore
+[33m6389d9d[m nothing much
+[33m4f14d8d[m Commit to running on an SMP (perhaps with only 1 core). Remove most code from picirq.c and remove timer.c completely.  Update runoff.list.
+[33m7070596[m comment fixes
+[33mda3b931[m Thanks Anton Burtsev <aburtsev@uci.edu>
+[33ma4ee6f7[m fix iput() to more obviously avoid deadlock
+[33m1c7aa96[m a little more lock documentation
+[33m70d912b[m protect ip->valid and ip->nlink with sleep lock in iput()
+[33m3375df5[m change ip->flags&I_VALID to ip->valid
+[33m1427028[m Merge branch 'master' of g.csail.mit.edu:xv6-dev
+[33maba8423[m frans' fixes to iput()
+[33m9cec455[m fs comment nits
+[33m825ce07[m Remove some debugging statements
+[33m61cb32a[m Merge branch 'nogs'
+[33m5cbccef[m Merge branch 'patch-1' of https://github.com/aliceinwire/xv6-public
+[33m0249311[m Merge branch 'patch-1' of https://github.com/Saarett/xv6-public
+[33m61f26e3[m Fix typo in dirlookup
+[33m1fb2ea8[m Update LICENSE
+[33m03b3086[m Free pgdir in setupkvm in case of mappages failure
+[33mc9fa90f[m A tiny bit of clean up (e.g., move code searching cpu array from lapic.c into mycpu() in proc.c.
+[33m2e2d14c[m use panic
+[33m7c00ce8[m shorten comment
+[33med396c0[m Eliminate code for gs trick to track per-cpu state.  We rely on lapiccpunum() to find a per-cpu id with which we locate a cpu's cpu struct.
+[33mfbb4c09[m Read curproc from cpu structure, but be careful because after a schedule event myproc() points to a different thread.
+[33mabf847a[m Start of an experiment to remove the use of gs for cpu local variables.
+[33m59cdd6c[m wolfgang keller
+[33mb4f2235[m Fix spelling Gaoron.
+[33md57d37e[m Thanks to Wolfgang Keller <nubok@users.noreply.github.com>
+[33mc383612[m Thanks to Wolfgang Keller <nubok@users.noreply.github.com>
+[33m1772853[m Add support for qemu-system-x86_64 in 64bit hosts
+[33m906610e[m Thanks to Jeehoon Kang <jeehoon.kang@sf.snu.ac.kr>
+[33m8d1f996[m Fix long-standing switchuvm() inconsistency.
+[33me916d66[m Fix unsigned conversion bug.
+[33m4629307[m Cody
+[33mffe4449[m fix possible memory leak in deallocuvm
+[33m91fd347[m Fixed broken build on newer gold linker with NaCl support
+[33m907f23a[m Add mikecat's argp test
+[33m2a67508[m fix memory region validation in argptr()
+[33m0df5f11[m Typo (Thanks to Austin Liew)
+[33m7ddba7a[m Merge branch 'master' of g.csail.mit.edu:xv6-dev
+[33m89826f4[m Check result of write (thans to Alexander Kapshuk <alexander.kapshuk@gmail)
+[33mfc1a5da[m Fix a small README typo
+[33m912575a[m Remove left-over print statements
+[33md6dc5bc[m Merge branch 'master' of g.csail.mit.edu:xv6-dev
+[33maeaa308[m change allocproc() back to acquiring the ptable.lock. fix bugs where caller incorrectly released lock on error return path.
+[33m469aa8b[m xx
+[33m3318866[m Delete two left-over print statements
+[33m6cec021[m Update comment a bit.
+[33mda91a3a[m Add sleeplock.[ch] to listing
+[33me85cb90[m one more BUSY
+[33m564a1cf[m sleeplock files
+[33mdec637b[m Replace I_BUSY with sleep locks
+[33m2adb7c2[m Move retry loop/sleep/wakeup in bio.c into sleeping locks
+[33m6670d3b[m Straight replacement of B_BUSY with a sleeping lock.
+[33m551c2f3[m Merge branch 'master' of g.csail.mit.edu:xv6-dev
+[33m1b8ccf9[m x
+[33m34c2efc[m use asm() for lock release, not a C assignment
+[33md63ac11[m this might fix the reported deadlock, though I can't reproduce it.
+[33m761ea54[m Be a bit more explicit what kind of suggestions are are interested.
+[33m5bf3fbe[m Make runoff happy
+[33mb7fed77[m Fix a few lines that runoff is complaining about that they are too long
+[33m5f03799[m ack xi
+[33mb8fd4cb[m Merge branch 'master' of g.csail.mit.edu:xv6-dev
+[33mae15515[m APIC IDs may not be consecutive and start from zero, so we cannot really use it as a direct index into cpus.  Record apicid in struct cpu and have cpunum() look for it. Replace cpu->id with cpunum() everywhere, and replace cpu->id with cpu->apicid. Thanks to Xi Wang.
+[33mbc8221a[m comment about sched() saving/restoring cpu->intena
+[33m4b2152c[m curproc -> proc in a comment
+[33m37939f2[m better comment
+[33m27ff70d[m ack
+[33maff0c8d[m set iomb to forbid i/o instructions from user space add to test that they indeed trap in user space thanks to pablogventura@gmail.com and nwolovick@gmail.com
+[33m745a4d3[m x
+[33m7894fcd[m Remove trailing white space with:  for f in *.{h,c}; do sed -i .sed 's/[[:blank:]]*$//' $f; done (Thanks to Nicolás Wolovick)
+[33m6de6a3c[m ack mikecat
+[33m5625ae4[m add check for wrapping of address + size in exec()
+[33m67a7f95[m add alignment check of virtual address to exec()
+[33ma7c03bd[m p2v -> P2V
+[33m7a77375[m x
+[33m1fc87f3[m Coding style (thanks to phf).
+[33m5faed8b[m Fixed QEMU command line avoids raw image warning.
+[33m0f3d9d9[m It will be for 2016
+[33m987064c[m Update based on a scan of my 6828 folder
+[33m2a11731[m Removed useless variable.
+[33m216fdf8[m Again, QEMU command line to avoid image warning.
+[33m1ccb5a6[m Remove unused variable, nits.
+[33m2c60b7f[m Removed useless function and prototypes.
+[33m09396a8[m Thanks to Warren Toomey for RDMUL and WRMUL.
+[33m4a3576b[m Small change to support RWMUL and WRMUL.  Now xv6 truly works with a block size that is a multiple of the sector size.
+[33m19f6541[m hold ptable.lock for the entire process creation however, processes still modify their own p->* without locking
+[33m20d05d4[m separate atomic test-and-set from memory barrier. * use xchg only for its atomicness. * use __sync_synchronize() for both CPU and compiler barrier.
+[33m9c65b32[m nothing much
+[33mc779cc2[m main comments
+[33m2411882[m nits
+[33m3431cd4[m more comments in entryother.S
+[33m0a69dc9[m even more explicit that entry.S is linked into kernel, unlike bootasm.S.
+[33m858475e[m tiny clarifications to some gdt code.
+[33m0a4a423[m shell nits fix Regehr complaint
+[33m50edfe1[m nits
+[33m5906118[m Remove console input.lock
+[33m02530a4[m Add sanity check panic for CRTC interactions
+[33mb019ac4[m Merge pull request #3 from beordle/master
+[33m9cbe056[m Merge pull request #5 from kehao95/master
+[33m5371a63[m Update URL for 2014
+[33mabce9b8[m Fix comments
+[33m4f2d381[m Fixed broken build on Arch Linux
+[33mecb40fb[m coding style (per Jeremías Feltan <jeremias.feltan@gmail.com>)
+[33mb67ed09[m Update memide to reflect recent changes to fs and buf
+[33m8320d61[m Pick up where i left off in april: - move log into metadata part of disk, so that marking that the log's blocks are in use falls out for free - superblock describes the whole disk (sizes and offets) - sizes and offsets are computed in one place (mkfs) and the rest of the code refers to the superblock for these values, instead of recomputing them.
+[33mde4af19[m One ide command for nsector_per_block generates nsector_per_block interrupts, instead of 1.   ideintr() should wait for nsector_per_block interrupts before waking up the reader; now it wakes up the reader after 1 interrupt, which apparently means that the first sector is available of the command instead of all. For now keep BSIZE to 512.
+[33m895af77[m check blockno passed to idestart
+[33mc24ac5d[m Disentangle block size from the disk's sector size.  Set block size to 1024 to show that they can be different.  Clean up mkfs, simplifying specifying fs parameters, remove some redundancy between fs and mkfs, and fix disk layout bugs. Call blocks in the file system blocks instead of sectors.  Passes usertests for different block sizes.
+[33m7443b96[m Fix missing NUL-terminator in grep
+[33m3d2dedd[m fix buf where concurrent fs syscalls race on log entries
+[33m41f16c2[m Increase VM memory when running qemu-memfs
+[33m8e54196[m Make kernelmemfs depend on kernel.ld
+[33m0dd991d[m Fix kernelmemfs linking
+[33m053082f[m ggdb -> gdwarf-2 for gcc4.8
+[33me7d77aa[m whoops. forgot date.h
+[33maae4e74[m cmosgetdate() for system-call homework
+[33m75dee12[m Oops (thanks David Lawrence)
+[33m9ba2126[m no need to generate postscript version
+[33m74c77da[m Nice layout for a printout of the code
+[33mac83a21[m Ack all bug reports and patches.  Is this all of them?
+[33m698b8fb[m update for 2014
+[33me2b4583[m xx
+[33m8d618ca[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m2b2c197[m write log blocks from cache only at end of transaction
+[33m1118358[m nits
+[33m48aa917[m i think this is a working concurrent logging scheme
+[33m71453f7[m a start at concurrent FS system calls
+[33m12eeefc[m comments
+[33m2c56547[m every iput() and namei() must be inside a transaction
+[33m020c8e2[m use acquire/release to force order for pid=np->pid;np->state=RUNNING for bug reported by symingz@gmail.com and cs1100254@cse.iitd.ernet.in
+[33m86188d9[m newer versions of qemu have different binary names (per Joel Nider <joel@nider.org>)
+[33mff27834[m Correct a security bug in copyuvm()
+[33m241c068[m Prevent extra rebuild of fs.img by keeping intermediate object files.
+[33mc440b5c[m Use static assert instead of _LP64  (thanks Eddie!)
+[33mcf57e52[m Remove -m32 flag from native gcc compiler But check that mkfs.c is building with LP64
+[33m2ae8392[m make the book happy
+[33m792d83c[m nits
+[33mc1ee7eb[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m8960f60[m junk
+[33m951b77f[m Various fixes and improvements to printpcs
+[33m020acb4[m For the convenience of students
+[33m6650cc9[m Use addr2line (or i386-jos-elf-addr2line, if you cross compile)
+[33m3fb7ece[m Runoff still complaints these lines are too long, but it is now ok on printout
+[33mf3f4b0f[m chmod +x
+[33mc2d393d[m Decode getcallerpcs() (thanks to Peter Froehlich)
+[33m95692c4[m Remove left-over from some logging plan making complete syscalls atomic 0 is not a system call (thanks to Peter Froehlich)
+[33m432acba[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m4ce832d[m Remove unused argument to setupkvm (thanks to Peter Froehlich)
+[33m70c5555[m Remove unused argument from lapicinit (thanks to Peter Froehlich)
+[33mb08d16f[m Fix from Peter Froehlich
+[33m9d59eb0[m Make fetchint and fetchstr use proc instead of taking a struct proc
+[33m12abb1a[m don't let dirty blocks be evicted from cache!
+[33m38eee5b[m more FS comment clarification
+[33ma5fbfe4[m clarify some FS comments
+[33md73dd09[m Fix compile error on newer gcc's
+[33m0ca1c04[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m9b972c0[m Update stressfs to trigger race now the logging code serializes writes
+[33m1e6f014[m Use | instead of + for entrypgdir.  Linker doesn't get in our way here.
+[33mc092540[m eliminate enter_alloc -- use kalloc for everything
+[33m7e7cb10[m more regular kmap[] and description
+[33m90a81b3[m comment nits
+[33m9b59dc4[m Remove unused 'state' variable that broke the build in recent gcc's
+[33me64c661[m Rev 6
+[33m8bfcffe[m Remove nice font from master
+[33m5c87802[m Fetch nice font from font branch, if possible
+[33m5304c85[m Move xv6 release tars/pdfs in to 6.828 repo
+[33m01a6c05[m Remove web directory; all cruft or moved to 6.828 repo
+[33m64a03bd[m Make web page refer to git releases
+[33mb81aadf[m Remove old book chapters
+[33m09b1909[m Re-alphabetize OBJS
+[33m03f4890[m Note about the meaning of sheet1 in runoff.spec
+[33m861cc15[m sources -> sources and text
+[33m5f46b27[m Shorten history of xv6 Cut section about commentary Add (failing) link to xv6 source section pointing to the text. Delete the incorrect/incomplete list of universities using jos/xv6
+[33m79bc8be[m Setting indent-tabs-mode nil everywhere is dangerous
+[33mb1c66ca[m Sync up clean and gitignore better
+[33m87904b0[m Update gitignore
+[33m310edc9[m Fix stale comments in entryother.S
+[33m2fc6c35[m Make the ELF entry point a physical address
+[33m68b5872[m kernel depends on kernel.ld
+[33me338730[m Add QEMUEXTRA environment to add extra QEMU arguments, like in JOS
+[33m549c62c[m I can't do math; fix bug introduced in 5a9761
+[33m215a9ce[m A few missed xv6.pdf dependencies
+[33me3ab68e[m Update year in URL
+[33m49d64d3[m Update index example in TOC footer
+[33m2a2e6eb[m Updated runoff spec; everything but ide.c is satisfied
+[33mc6c0cb8[m Fix same wonky pagebreak bug in console.c
+[33me76dab4[m Put filewrite in its own column
+[33m7d9ee3b[m Fix weird pagebreak bug
+[33m5a97613[m Fit exec on a page.  Again
+[33m4e015d8[m Shorten sys_unlink a little; create now fits in column
+[33m9bb1e53[m Add blank page to get our super FS spreads back
+[33m7fb2119[m Remove comment debug prints from log.c; now fits nicely in a spread
+[33mee1b330[m Define struct log separately from log to avoid confusing column breaker
+[33ma14c96f[m Comment balance
+[33m436f657[m Remove unused headers from log.c
+[33m788e27d[m Fit fs.h in one column
+[33m3c01f5a[m Remove data.S from runoff, too
+[33m30c1901[m Remove unused x86.h definitions
+[33mdd4438b[m Nuke data.S, since we do have a custom linker script.
+[33mce6dd9d[m Correct terminology in kernel.ld
+[33m6f3ca05[m Oops, dropped a paren
+[33m2eb214c[m clear_pte_u -> clearpteu
+[33m91aa0f3[m Move copy_pte_u; fits vm.c in one less column and aligns proc.h
+[33m9e4272c[m Cleanup comments and fit setupkvm on same page as kmap, which aligns lots of other things
+[33m14835ec[m Style
+[33mcf7b670[m Make mappages fit on the page
+[33m82bb0b5[m bootother -> entryother in README
+[33m052e184[m Skip missing page directories in deallocuvm
+[33m1eadf4a[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m371ab7f[m inaccessible page under the user stack page, to help exec deal w/ too-large args
+[33m6bb9221[m Fix layout
+[33me04329a[m Have one definition of kernel stack size
+[33m62e3b8a[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m5a23692[m fix usertests to correctly test what happens when you call exec() with arguments that don't fit on a single page.
+[33md0f3efc[m Use stosl in memset; makes boot time bearable
+[33me25b74c[m Fix layout issues for printed version
+[33m15997d5[m move the kernel to 0x80000000
+[33m5c292b3[m simplify the end of entry.S
+[33m5e08357[m enterpgdir -> entrypgdir
+[33m1ddfbbb[m Revert "Introduce and use sleeplocks instead of BUSY flags" My changes have a race with re-used bufs and the code doesn't seem to get shorter Keep the changes that fixed ip->off race
+[33m22f7db5[m Renumber I_VALID since I_BUSY is gone
+[33m920b7b4[m dir-locals.el to set style in Emacs
+[33ma7061b4[m Style nits; indentation and tabs
+[33m16f205b[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m3a5fa7e[m Introduce and use sleeplocks instead of BUSY flags Remove I_BUSY, B_BUSY, and intrans defs and usages One spinlock per buf to avoid ugly loop in bget fix race in filewrite (don't update f->off after releasing lock)
+[33m41911af[m segment register -> segment descriptor
+[33m8a9b6db[m Make cross reference with text work
+[33m6f23275[m Eliminate USERTOP; no use for it.
+[33m194f8bf[m A comment
+[33md10d324[m Remove sys_init syscall Invoke initlog from forkret on first user process
+[33m39f8cc5[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m3682474[m delete dead code
+[33m327cc21[m make dirlookup and dirlink more similar
+[33mcd3d739[m bootloader reads into a physical address (not a virtual address)
+[33mfa81545[m Make elf proghdr fields match what objdump prints
+[33m5f069dc[m Switch back to #define for PHYSTOP.  Using the E820 to retrieve the memory map is too complicated (must be done in 16-bit real-mode, probably enlarged bootblock beyond 512 bytes, and a #define requires less explanation).
+[33mc3dcf47[m Clean up memlayout.h Get rid of last instances of linear address and "la" Get ready for detecting physical memory dynamically
+[33m427958c[m Update make clean
+[33meeea49e[m Update list of files to include in printout
+[33md9818bd[m Make Austin happier 2011
+[33ma4b213c[m Avoid "boot" in xv6
+[33m9449646[m Use 4Mbyte pages during boot
+[33m843eecf[m Only commit log to disk if something was written in to it.
+[33m7f1718c[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m5053dd6[m avoid deadlock by calling begin_trans() before locking any inodes
+[33mc60a355[m Separate more clearly bootloader from xv6 by renaming multiboot.S to entry.S etc. Maybe the string boot shouldn't appear in xv6 code?
+[33mc95ce31[m Oops
+[33me0d1ba0[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m2e59046[m log write() data usertest for big write()s push begin_trans/commit_trans down into syscalls
+[33me577a62[m Some comments
+[33mbd71a45[m Make AP processors boot using bootpgdir Remove device mapping from bootpgdir Remove unnecessary vmenable Set CPUS back to 2 in Makefile Passes all usertests
+[33m673b739[m One more low address
+[33m8a9933a[m Tiny bit of cleanup
+[33m22c7341[m Shorten boot assembly
+[33m5460667[m x
+[33m832af02[m Remove jmpkstack
+[33m66ba807[m Use static page table for boot, mapping first 4Mbyte; no more segment trick Allocate proper kernel page table immediately in main using boot allocator Remove pginit Simplify address space layout a tiny bit More to come (e.g., superpages to simplify static table)
+[33m3a03810[m Use kernel virtual addresses for BIOS memory, etc.
+[33mb23d832[m Allow gas to use / as divide (instead of comment) Maybe not necessary, but don't want to waste time figuring this out again
+[33ma56c8d6[m One definition of several macros and constants
+[33m11b7438[m Speedup sbrk tst a bit (forking 100Mbyte processes is slow)
+[33m6479766[m Adjust sbrk test for large user address spaces All tests pass
+[33m67d4254[m oops
+[33m547c28f[m Don't map IO space in the user part of the address space Passes all tests now (but need to update usertests to allow for more than 640k)
+[33m9aa0337[m Map kernel high Very important to give qemu memory through PHYSTOP :(
+[33mdccb915[m Merge commit 'origin/master' into page
+[33m13a96ba[m Dirt simple logging Passes usertests and stressfs Seems to recover correctly in a number of simple cases
+[33m97657d7[m Add -fno-omit-frame-pointer to compile flags.
+[33m96b7da5[m do not run past the end of the disk! [ cherry-picked de6075ff0978108daea1d658425bcb37663a98a0 ]
+[33mf70ef99[m Russ's fix for panic remap
+[33mae603ff[m rebuild xv6-rev5.tar.gz
+[33mc5f5387[m fixes from Peter Froehlich
+[33ma6cd750[m web: rev5
+[33m688b5c0[m updated book pdfs
+[33mcf4b1ad[m xv6: formatting, cleanup, rev5 (take 2)
+[33m9c4fe7b[m xv6: formatting, cleanup, rev5
+[33m97b21b5[m xv6: refresh from 2010 page
+[33m08864af[m xv6: link to xv6-rev4
+[33m4fa8614[m missing file memide.c
+[33m417c371[m more trivial cleanup
+[33m89bfdd4[m multiboot support and memory-only (no disk) kernel
+[33maf6a6a4[m mp: do not panic on surprising hw
+[33m1a81e38[m make new code like old code
+[33m2406796[m mkfs: avoid clash with system struct stat
+[33me92fd61[m mkfs: avoid out of bounds access to sb in wsect
+[33m2ea6c76[m even more fabulous exec
+[33m06feabe[m check exec() arg length fix double iunlockput
+[33m4655d42[m copyout() copies data to a va in a pagetable, for exec() &c usertest that passes too many arguments, break exec
+[33ma918388[m map kernel instructions r/o
+[33m26d11ee[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m05d66b0[m my comment is wrong, exec handles BSS fine
+[33m4587b35[m exec questions
+[33m4c274ce[m Simplify boot loader by removing some JOS'isms
+[33mfaad047[m change some comments, maybe more informative delete most comments from bootother.S (since copy of bootasm.S) ksegment() -> seginit() move more stuff from main() to mainc()
+[33m124fe7e[m Rev 4
+[33mcc21c06[m Update example in TOC footer
+[33m588644f[m Consistent style in defs.h
+[33m8440dbf[m Get consoleintr back on one page
+[33m08eef9e[m Get cgaputc and consputc back on the same page
+[33m5bf11c5[m Get rid of the blank page in picirq.c.  It misaligs things now.
+[33m79cd8b3[m Simplify allocuvm/deallocuvm to operate in a contiguous memory model.  This makes their interface match up better with proc->sz and also simplifies the callers (it even gets the main body of exec on one page).
+[33md49d313[m Nits
+[33m9a4670a[m Comment inituvm and loaduvm
+[33m93a1e4c[m Fix comment capitalization
+[33mf25a3f9[m Rearrange vm.c so it's in logical order and prints nicely.  Shorten a few functions in uninteresting ways to make them fit.
+[33mf53e611[m Simplify inituvm and userinit by assuming initcode fits on a page
+[33mb3cfd7f[m Simplify freevm using deallocuvm
+[33mc7c2146[m Oops.  Broke the build when I rearranged proc.c
+[33md599aa2[m Remove unused nop_pause function.
+[33md882881[m Rearrange proc.h and proc.c to get our action-packed spreads back (mostly).  They also make sense in this order, so it's not just for page layout.
+[33mdd3ecd4[m Re-re-arrange bootasm and bootother.  We can't get bootasm and bootmain on the same page, but this will make them easier to flip between.
+[33md2c7f64[m I totally misunderstood the even/odd spec.  Add some docs, remove my 'left+' hack, and orthogonalize left/right versus even/odd so you can specify them independently.
+[33m9d7a63e[m Specify in runoff.spec which side sheet 1 is on, since it keeps changing
+[33m0fa1ab6[m Pack five columns into cross-ref.  This saves us an entire page and fixes the single dangling line.
+[33m1280d26[m Oops, missed a comment about the stack guard
+[33m4d245c7[m Add Nickolai and myself and scrunch two lines out of the text elsewhere
+[33md3ecf3e[m Slight simplification of copyuvm.  We could simplify other things now that processes are contiguous, but we'd have to think harder about the error paths.
+[33mb1d41d6[m Remove the stack guard page.  Processes are now contiguous from 0 to proc->sz, which means our syscall argument validation is correct.  Add a pointer validation test and remove the stack test, which tested for the guard page.
+[33m41c4bbb[m Make it easy to change the number of CPUs
+[33mb0751a3[m Space police
+[33m5efca90[m Tab police
+[33m5c4dc73[m Merge branch 'master' of git+ssh://am.lcs/home/am0/6.828/xv6
+[33mba04b3e[m Fix similar leak in copyuvm
+[33mdd645ef[m Cleanup if allocuvm fails to alloc.  Add a test.
+[33m23c3e52[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33m3597d5d[m oops. last minute simplicifaction to kalloc().
+[33m5048762[m Page break kalloc.c
+[33m87b2099[m Our proc.c alignment is perfect.  Since ksegment/usegment went away, we get a column back, so we get our two action-packed spreads.
+[33m13b3f4d[m Make it possible to express half-page preferences
+[33mfd462b6[m Got the meat of spinlocks on one spread
+[33m6a6bf37[m Swap bootmain.c and bootother.S.  This puts the whole boot process on one spread, though it separates the two asm files.
+[33mc7ceb71[m Sheet 1 is a right page now because of the (much) longer cross-ref
+[33m51e2a7b[m print depends on runoff.spec
+[33m29c054d[m We don't use lesp/lebp and using them at all from C would be fraught with peril.  Keep resp/rebp, but fix their code style.
+[33m7914ab7[m Page breaking of mmu.h
+[33mb5592b4[m Start PDE defs on new page
+[33m92639b6[m Follow xv6 code style.  Also fixes indexing for these functions
+[33m37ee75f[m Rearrange for better page breaking
+[33m7472b2b[m Fix too-long lines
+[33m04be8fb[m Rebalance TOC
+[33m7b81413[m Acknowledge patches
+[33m1aee6a6[m Hopefully get the printf size spec right, regardless of compiler.
+[33m8d774af[m no more pminit, or ELF header at 0x10000 kinit() knows about end and PHYSTOP map all of kernel read/write (rather than r/o instructions) thanks, austin
+[33m880ee18[m mkfs must be compiled 32-bit.  Fix mkfs warnings
+[33m1e8035b[m Infer qemu path, just like in JOS
+[33m0f0456e[m Infer TOOLPREFIX, just like in JOS
+[33m9acdfe0[m Merge branch 'page' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6 into page
+[33m7d7dc93[m kalloc/kfree now only a page at a time do not keep sorted contiguous free list
+[33m791d81c[m Merge branch 'page' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6 into page
+[33m156b307[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6 into page
+[33m81b30b1[m Merge remote branch 'origin/master' into page
+[33mfe4623b[m Fix for gdbstub argument change in qemu 0.11.  Rename qemu-gdb-nox target to qemu-nox-gdb because you frequently want to add the gdb part, but rarely the nox part.
+[33m3c9ff07[m oops ended up with 2x vm.c
+[33m979c568[m Merge remote branch 'origin/page' into page
+[33mac09007[m xx
+[33m4d97249[m no more xv6.pdf .ps
+[33m8d8d6c7[m we don't need CR0_WP
+[33m5ab868f[m set only PG and WP in vminit; the rest don't seem to be needed and are confusing
+[33md55b2fa[m Merge commit 'origin/page' into page
+[33md87f51c[m add vm.c
+[33m789b508[m uptime() sys call for benchmarking increase PHYSTOP
+[33m83d2db9[m allow sbrk(-x) to de-allocate user memory
+[33mc4cc10d[m fix corner cases in exec of ELF put an invalid page below the stack have fork() handle invalid pages
+[33m1afc9d3[m add some comments find out the hard way why user and kernel must have separate segment descriptors
+[33mc995997[m remove some unused vm #defines fix corner cases with alignment when mapping kernel ELF file
+[33m2cf6b32[m move jkstack to main.c replace jstack with asm()s
+[33meb18645[m fix allocuvm() to handle sbrk() with non-page-granularity argument (maybe this never worked, but it works now)
+[33mb738a4f[m kill TLB shoot down code
+[33mde40730[m more cleanup
+[33m30f5bf0[m some cleanup
+[33maf03ab1[m a few nits passes all tests on two-processor smp
+[33mb364c4b[m oops, vm.c
+[33m4714c20[m Checkpoint page-table version for SMP Includes code for TLB shootdown (which actually seems unnecessary for xv6)
+[33m74c82bc[m nits
+[33m4088962[m Initial version of single-cpu xv6 with page tables
+[33mb7a517f[m another rev2 -> rev3
+[33m5d142a7[m point at rev3
+[33m7d7465a[m 8ae0 instead of 8e00, thanks yandong
+[33m5e710e6[m Add stressfs and gdbutil to dist
+[33mb0170c4[m GDB utilities
+[33mf4c12f1[m Add the test we used in lecture to creash the IDE system when the locks were moved around.
+[33md6cd7d0[m Merge branch 'master' of git+ssh://am.lcs/home/am0/6.828/xv6
+[33m745e73c[m Comment typo
+[33maaf63e6[m Merge branch 'master' of git+ssh://amsterdam.csail.mit.edu/home/am0/6.828/xv6
+[33mab777a9[m fine-tune comment
+[33mfb48687[m fine tune comment
+[33m2c536bf[m Remove memcpy prototypes at Russ' request to prevent code from calling memcpy directly.
+[33m6639ce5[m Provide memcpy for compatibility with older versions of gcc
+[33m77a9aa5[m Record debug info for assmebly code
+[33m29d8c2e[m Handle backspace on serial input and output better.  Better solutions are welcome.
+[33mbab819e[m Be consistent with JOS make targets
+[33m3adc415[m Hack to make newlines on the serial port work
+[33m67f7909[m Use the symbol file
+[33m01396b3[m xv6 runs the console on the serial port, not the parallel port
+[33mccd980b[m nit in comment
+[33m074ac7c[m add .gdbinit.tmpl to dist
+[33m8252f62[m add uart.c
+[33m01b667e[m rev3
+[33m37ba1c1[m ignore .gitignore
+[33m568bbae[m qemu-gdb target and script
+[33mc51e175[m new pdf
+[33mc9ee77b[m formatting tweaks
+[33md26025d[m can set just %gs now.
+[33m7e0cc8e[m another attempt at cpu-local variables. this time do it ourselves instead of piggybacking on TLS. add -fno-pic to Makefile; pic code breaks our fake TLS.
+[33m374362c[m lapic: disable microdelay because it makes Bochs slow
+[33mf8ab207[m fix TLS again; still not quite but a lot better.
+[33m57ae146[m Fix TLS for PIC systems
+[33m45a9782[m fix bootblock build with gcc 4.4
+[33m4875521[m assorted fixes:  * rename c/cp to cpu/proc  * rename cpu.context to cpu.scheduler  * fix some comments  * formatting for printout
+[33m0aef891[m shuffle and tweak for formatting. pdf has very good page breaks now. would be a good copy for fall 2009.
+[33mb3bebfc[m exec tweaks
+[33mfd8e368[m remove //DOC in the right place
+[33m4ed996f[m strip //DOC comments during printing
+[33md42cbd7[m merge
+[33m00e5711[m more doc tweaks
+[33mee1e682[m undo
+[33m7fff313[m test commit email
+[33m2c5f7ab[m initproc, usegment, swtch tweaks
+[33mb121486[m spinlock: rename parameter lock -> lk
+[33mb8912d9[m mmu.h: unused SEG_NULL
+[33mf9a0644[m rearrangements and cleanup for text
+[33m2de1c55[m trap cleanup
+[33m887f196[m bootasm cleanup
+[33m8b75366[m s/IRQ_OFFSET/T_IRQ0/: it's a trap number, not an irq number. move the SYSCALL number up, so does not overlap the IRQ traps.
+[33m27ff8f0[m compile fixes
+[33m34295f4[m group locks into structs they protect. few naming nits.
+[33m949e559[m usys.S: put before init.c, STUB -> SYSCALL
+[33m90bab90[m exec sanity check
+[33mf3685aa[m simplify
+[33m7f399cc[m use ftable like btable and itable
+[33mce72cad[m fix bug fix
+[33m13ae880[m tidy fs.c; bmap callers always expected allocation
+[33mf12551b[m inode reuse bug.
+[33m0badeaa[m bio.c: use struct like icache does
+[33mc47bc4f[m ide.c: make names more regular
+[33m7b64431[m clean up %fs %gs use
+[33me97519a[m sync with c; .text is implied
+[33mba6cd8a[m drop NADDRS and INDIRECT; too many names
+[33m030a477[m tab police
+[33m2157383[m move fork into proc.c
+[33mdae9b0d[m missed this file in last checkin
+[33m19333ef[m Some proc cleanup, moving some of copyproc into allocproc.
+[33m0c7f483[m move T_DIR etc into stat.h; move type up
+[33m74afa70[m Add serial port input/output. Delete parallel port output. Works well with qemu -nographic mode.
+[33m0ca9ca0[m slight rearrangement; sleep on b not buf.
+[33md827c8f[m Add MIT license file; update xv6-rev2.tar.gz with LICENSE. Other files unchanged.
+[33m2157576[m be consistent: no underscores in function names
+[33mb7f653d[m xv6: boot loader adjustments
+[33m8220135[m xv6: use stosb for memset
+[33mc396d06[m xv6/x86.h: add stosb, fix bugs in insl/outsl (rep not repne)
+[33m4003e9b[m xv6/x86.h: inline assembly cleanup
+[33m8eb2082[m Explain why itrunc() is OK w.r.t. crashes.
+[33m15a2693[m try harder to get directory refcounts right
+[33mf3e87bc[m make mkdir crash-safer, as noticed by many students on midterm
+[33me162670[m free the indirect block
+[33me670a48[m as rtm noticed, avoid doubly-freeing pipe page
+[33mdeca9fe[m indent
+[33mc100d9e[m cleaner swtch.S
+[33m228e500[m save cpus.intena in sched(), so we get the right EFLAGS.IF value once a timer-preempted kernel thread resumes execution in trap() after yield(). otherwise the kernel could get an arbitrary number of nested timer intrs.
+[33m15ce79d[m check cp->killed before returning to user from a timer interrupt
+[33m00ce31c[m update .cvsignore
+[33m289bbef[m minor cleanup
+[33mf73b812[m minor cleanup with STUB macro
+[33mc780dbf[m include explicitly initialized globals (int x = 0;) in cross-refs, also thanks to greg price.
+[33m6186836[m fix: when two names only differed in case, crossrefs only included one of them. thanks to greg price.
+[33m2ce40d7[m be clear what the root i-number is
+[33mbe38c84[m document lock->locked=0 vs xchg(&lock->locked, 0)
+[33m0159c8b[m trap 9 does not push ec: fix from Greg Price <price@mit.edu>
+[33mc7317d4[m always save and restore %fs, %gs to ensure old segment entries are never accessible to user from the hidden CPU segment registers.
+[33madcd16c[m restore std toolprefix
+[33m4651d04[m omit *.d from tar file
+[33me9ae6f5[m add copyright notice
+[33mf683175[m make bochsrc work for bochs 2.2.6
+[33m35a6cf8[m make pdf, ps, tarball
+[33me87dca5[m nits in index.txt add slides for shell, x86 intro, x86 virtual memory  (deleted JOS from slides)
+[33mf53494c[m DO NOT MAIL: xv6 web pages
+[33mee3f75f[m simplify growproc
+[33m98754d6[m avoid a bug w/ exit()
+[33m5608246[m the old explanation of AP startup might have been correct, but I understand this one.
+[33m02cc595[m clean up circular buffers, so pipe can queue 512 bytes rather than 511
+[33m5c5470a[m fix obvious printf nits after reading through code
+[33m1808b2f[m now rev2
+[33m150785a[m add nice font
+[33m9b62657[m formatting updates
+[33m5b7f8cb[m bochs faster
+[33m174729f[m xv6: latest (as of January 2008)
+[33meadbd55[m oops - wrong bit (vic zandy)
+[33mc2258bf[m fork minibug
+[33m4f06ae0[m More complete lapic startup (thanks Silas)
+[33ma6c4711[m bda[0xE] is a 16-bit segment number, not a real address.  So shift 4.
+[33mfd6b029[m proc_wait -> wait
+[33m949352a[m Model verifying that wakeup really can be called after release without causing deadlock.
+[33m943fd37[m Incorporate new understanding of/with Intel SMP spec.
+[33m9fd9f80[m Re: why cpuid() in locking code?
+[33mc840f3e[m tricks
+[33maf7366c[m interrupts during system calls
+[33mab08960[m Final word on the locking fiasco?
+[33mf97f0d2[m cleaner
+[33mc95bde8[m yank out stack overflow checking ugliness
+[33m4f74de0[m okay, that was long enough - revert
+[33mce2e751[m test: store curproc at top of stack
+[33maefc13f[m nit
+[33m3807c1f[m rename splhi/spllo to pushcli/popcli
+[33m39c3fb1[m overkill: use segments to catch stack overflow (delete before next year)
+[33m8c8b748[m now spllo is okay
+[33mb5dcebd[m better lapic writes, suggested by cliff
+[33m4721271[m use larger, allocated cpu stacks
+[33m0fe118f[m don't call it ss - that's the stack segment
+[33mc8919e6[m kernel SMP interruptibility fixes.
+[33m75506c6[m use console lock
+[33md522571[m make slow bigdir last test
+[33mad12b48[m changes since two days ago:
+[33mb30ab3f[m use standard bios location
+[33m666f58c[m believe it or not, this was working
+[33m90d975e[m comment bochs nonsense
+[33mfbaa7b4[m various comment and print tweaks
+[33m56c1a15[m debugging prints
+[33md5596cd[m Apparently the initial interrupt count lapic[TICR] must be set *after* initializing the lapic[TIMER] vector.
+[33m355073e[m oops, interrupts on in syscall traps doesn't work after all
+[33m3eda271[m tell SETGATE to leave interrupts on for T_SYSCALL panic if unknown fault with CPL=0 (i.e. in kernel)
+[33md7a90d3[m This should fix building on FreeBSD
+[33m6197c04[m Fix compilation on 64-bit machines (thanks to andersk for patch)
+[33m411ee74[m fix comments
+[33me9f8419[m sh
+[33mab4cedb[m continuous quality management
+[33mef21852[m symlink implementation
+[33me51ae8a[m do not toss .ps
+[33m9863fea[m clumsy cd
+[33mfbd8857[m make new Homework 8 work
+[33m3732119[m oops - broke circular buffer
+[33m71d5bf4[m oops - broke arg counting
+[33mde1329d[m longjmp -> swtch in comments
+[33m0510938[m tweak
+[33m42f3c3f[m DO NOT MAIL: xv6-rev1
+[33m55401f2[m final xv6 for 2007
+[33mfebdc07[m bootothers now in main
+[33mbc54fa3[m spelling
+[33mbf2932a[m final nits
+[33m68a2d53[m match README
+[33mf040060[m nits
+[33mcffa954[m nits
+[33m5573c8f[m delete proc_ on proc_exit, proc_wait, proc_kill
+[33meb52c7d[m comments; rename irq_ to pic_
+[33m5516be1[m spaces around else for rtm
+[33me4d6a21[m more consistent spacing
+[33mc1b100e[m nits
+[33m3e1eaf2[m fix offsets
+[33ma491dba[m more cmain -> bootmain
+[33md844f0f[m Change dev read/write functions to take inode* instead of minor number.
+[33me3f271e[m oops
+[33mc35c064[m cmain -> bootmain
+[33mfc21046[m nit
+[33m818fc01[m replace setjmp/longjmp with swtch
+[33mb52dea0[m never returns!
+[33m0c931af[m nits
+[33m6eed1ee[m formatting
+[33mc2f354e[m clumsy blank pages to make some files align better
+[33m2d7d2b1[m rename 8253pit -> timer
+[33m9e82bfb[m rename 8253pit.c to timer.c
+[33meae0416[m runoff
+[33m1a89baa[m add grep; add lost echo
+[33m51c0c1a[m avoid double echo
+[33m7834cca[m remove _ from pipe; be like file
+[33m76f09d7[m clean up Makefile; add wc
+[33ma1af366[m add struct stat decl
+[33m4c917f6[m do not call proc_exit until lock dropped
+[33m1baead5[m oops
+[33mb943284[m handle printf("%s\n", 0)
+[33m43baa1f[m nit
+[33me6ffaa9[m oops
+[33m3341e30[m nit
+[33ma759b8a[m formatting tweaks
+[33m2868ca0[m comment non-check of cp->killed
+[33m8970df0[m No one is going to find this inode. There is only one ref to it -- the caller -- and no links to it.
+[33m1b25f3b[m New shell.
+[33mf0d11fe[m Move keyboard code into kbd.c; add backspace handling.
+[33mc1bfbfa[m oops
+[33mfa74a74[m move mp.h to low-level
+[33ma8acdf0[m no more ioapic.h
+[33m773159f[m make code match comment
+[33m3a2310f[m make code match comment
+[33m64c4737[m make code match comment
+[33m19b42cc[m Rename main0 to main.
+[33m558ab49[m delete unnecessary #include lines
+[33m99b11b6[m Simplify MP hardware code. Mainly delete unused constants and code.
+[33mb63bb0f[m Clean up lapic code.
+[33m112873b[m nits
+[33mda94233[m nits
+[33m3ce1647[m nits
+[33m603deef[m oops
+[33m629c1fe[m Edit exec.
+[33me79b165[m nits
+[33m13491bf[m formatting shuffle
+[33m1ccff18[m fileincref -> filedup (consistent with idup)
+[33m7895178[m nits
+[33m6c34f97[m tell what an inode is
+[33ma505fd6[m FS cleanup.
+[33md003d23[m Another attempt at the bio.c comment.
+[33mefc12b8[m Replace yield system call with sleep.
+[33me1872bb[m formatting, fix comment
+[33me024067[m make kfree loop same as kalloc
+[33m7bb73cd[m nits
+[33m8e67005[m cut bootmain to 1 sheet
+[33m8d2e9a4[m shuffle for formatting
+[33md7b44db[m minor cleanups
+[33mcb30c81[m nit
+[33m872a63e[m nits
+[33m766ba5c[m first ever correct use of strncpy
+[33maa6824a[m remove unused variable
+[33m07090dd[m Remove struct uinode. Remove type arg to mknod (assume T_DEV).
+[33mfa1b341[m not first anymore
+[33m97ac612[m nits
+[33mffa58d3[m align
+[33mdd86897[m make wakeup1 static
+[33me0e7d07[m test that fork fails gracefully
+[33m5af5f6a[m Reorder spinlock.c: acquire and release first
+[33m4bcd0f6[m Add yield system call, for zombie test program (bad idea?).
+[33m1b789e1[m Remove puts in favor of printf. Allow multiple arguments to ls.
+[33m8e88f9e[m comment nits
+[33m4d39b63[m nits
+[33m895c182[m finish comments
+[33m124f32a[m tweak
+[33m902b13f[m simplify ide queuing nits in comments
+[33m2bc72bd[m bring bootasm and bootother more in sync
+[33m5d1f4b8[m Rework comments a bit.
+[33m2036534[m add missing iput() at end of _namei()
+[33mb555137[m oops, O_CREATE doesn't truncate, so holes can't exist, thus no bug
+[33m3d5f21e[m test concurrent open/unlink of same file (ok) test files with holes (not ok)
+[33m68ae4cc[m comment what +m means; omit needless __
+[33m2aae720[m omit needless ampersands
+[33m649bc99[m align, sort
+[33mb1fb19b[m Use parent pointer instead of ppid.
+[33m3a057d1[m avoid hardcoding init as pid 1 proc[0]
+[33m1d7839a[m my mistake found by robert
+[33me9ddc7c[m NREQUEST = NBUF
+[33m15868c4[m better comment
+[33mf0721f1[m tweaks
+[33meaea18c[m PDF at http://am.lcs.mit.edu/~rsc/xv6.pdf
+[33m3dcf889[m cleanup
+[33m6bf2e5c[m add ln
+[33mc88bf23[m check unlink of non-empty directory
+[33mbd39955[m ARGMAX -> MAXARGS
+[33mfbf9103[m remove namelen parameter
+[33m0073bee[m remove dead code
+[33mf32f363[m Various cleanup:
+[33m2d61a40[m bug in usertests!
+[33me2a620d[m checkpoint - simpler namei interface
+[33mef30c2c[m no more w
+[33mbcca6c6[m shuffle fs.c in bottom-up order
+[33m0655445[m cleanup loop
+[33m2186f88[m formatting, cleanup
+[33mcce27ba[m formatting
+[33m07ddc0f[m nit
+[33mfe5f50a[m fixes
+[33m5e8c5d8[m formatting; split kbd constants into kbd.h
+[33mea6e370[m i cannot prove that release before wakeup is wrong, but i cannot convince myself it is right either
+[33m4bc5056[m formatting, simplify
+[33m8d0a835[m formatting, sleep bug fix
+[33mf1f8dd9[m formatting
+[33m29ff8d4[m ide_write unused => gone
+[33m8c4b5fc[m Gcc expects to be able to pick up the return address off the stack, so put one there for it. (Bug was hidden by bad segment limits.)
+[33m2ef3a64[m Because limit gives the address of the last addressable byte in the segment, the limit argument to SEG16 and SEG needs to have 1 subtracted from it.
+[33m6465905[m ditto
+[33m3163085[m Cannot use "g" as an arg constraint because some memory references aren't actually valid and gcc is a bit too smart in parsing (%0) and a bit too dumb in knowing which memory refs are not valid.  Using "r" seems to constrain gcc to use a register as in (%eax) and not substitute a memory reference like (-36(%ebp)).
+[33m5e03dd8[m add test for rm .
+[33m15b326b[m nit
+[33m8908cc9[m correct line numbers
+[33m8139713[m add note
+[33m2715cd3[m and spinlock
+[33mdca5b5c[m avoid assignments in declarations
+[33m6861140[m replace bogus loops with slightly less bogus loops.
+[33m3d14528[m tweak kalloc
+[33m9736728[m cleanup main
+[33m7d4aef6[m various cleanups
+[33mb609530[m Make cp a magic symbol.
+[33m3bbbaca[m move variable declaration up
+[33mbc01170[m The final curproc[cpu()] is now cp
+[33mab5c2db[m Clearer namei
+[33m806f4c1[m oops
+[33m9583b47[m try to use cp only for curproc[cpu()]
+[33m2233065[m spacing
+[33m4249490[m notes
+[33mf2f062d[m check p->killed for long-lived sleeps
+[33m1cb183a[m 2007
+[33mc65e499[m help gcc
+[33m95c07f8[m move ialloc body up, avoiding double check for end of loop
+[33m32eea76[m panic like bget
+[33m3f98d05[m refactor bget to be more like iget - make it clear that sleep loops
+[33m9ad44da[m unused
+[33mc16e091[m cleaner table
+[33m19b1f63[m cleaner table
+[33m453c6a6[m convert syscall dispatch to table
+[33mc664dd5[m missing void
+[33m61dff66[m fix error message
+[33m115e177[m standardize on not using unsigned keyword
+[33md80b06a[m iincref returns new ref
+[33m35a24c8[m fix index bug
+[33m2e51e12[m make ls work on directories
+[33m3fd5097[m spacing
+[33m5d0fe34[m more bugs
+[33m5f0c20e[m fix . .. unlink bug
+[33m5bbba97[m done
+[33mb6dc618[m add DPL_USER constant
+[33mf83f7ce[m set init name
+[33m00d0f79[m fix various bugs
+[33mbda5186[m silence warning
+[33med960d2[m watch for zombies
+[33me204d0a[m atoi, for kill
+[33me092482[m add kill
+[33me695b84[m spacing
+[33maf689dc[m oops
+[33m39c84cc[m fix wait bug in init
+[33mf8f7fcb[m handle EOF in shell
+[33m349ee13[m add zombie program
+[33ma7d18bb[m comment tweaks; more informative process list
+[33m7366e04[m save process name for debugging
+[33m7e89fb9[m add safestrcpy
+[33mcd08e6e[m typo
+[33ma059f02[m change gets to return \n, to distinguish 0-byte read from empty line
+[33m0701806[m add EOF handling to console_read - works with cat
+[33mca3d577[m add rule to generate init.sym
+[33m71d1122[m add bootmain.c to runoff.list
+[33mb4c1a88[m forgot to check in long ago
+[33mcc9c981[m bug reported by nelson
+[33m4b5443c[m record tim's bug and patch
+[33m7356f26[m a few notes
+[33mf8ac639[m a few other nits
+[33mb438eff[m Have kernel build rule create kernel.sym, which can be used in Bochs to make breakpoint setting easier:
+[33mc25e0a5[m accumulate bugs
+[33m05eecb6[m a copy of xv6.pdf that can be sent to turkey and duplexes correctly
+[33m5cc0bd5[m sent to printer - CTC job 6955 40 copies
+[33m2c88030[m dist tarball
+[33mca01403[m fix toc example
+[33me936743[m tweak
+[33mb02e13f[m shorten
+[33m3689c7f[m unnecessary struct jmpbuf
+[33mba969aa[m make lines shorter
+[33m5788b36[m nit
+[33m4fb6845[m formatting nits
+[33mefb01c1[m only need a page
+[33m5c596bb[m consistency.
+[33m5cb7877[m use bootstrap processor as specified by MP table. typically 0, but not guaranteed.
+[33mf80873e[m update line numbers
+[33m5eb6212[m xv6 style
+[33mdb2d8e4[m dist rules
+[33mfb6ddf3[m tweaks
+[33m66d46d6[m fix file names
+[33m8be7e70[m wording nit
+[33m8e1d1ec[m some comment changes
+[33m50f8850[m move ide_intr lower
+[33m4194835[m tweak fs.h spacing; add comment
+[33mcd12eea[m make trap fit on one page
+[33m1656b1b[m move growproc up higher
+[33mbe29b8e[m ++
+[33md6d636a[m make setjmp fit on one page
+[33mab299eb[m can break after }; too
+[33md911d83[m fix various comments
+[33mec5783c[m runoff changes
+[33m72a590d[m quiet
+[33m2cbb4b1[m stop using fd to name files
+[33m5692823[m minor makefile fixes for printing cut last line of readme so that readme fits on single page
+[33m2e89806[m a bit more structure
+[33m4d33ef8[m explain how to use
+[33m339a9be[m new targets bochs and qemu
+[33mf3c393b[m fix tests
+[33m641e29c[m add copyright notice
+[33m95edc89[m debugging help
+[33m41abfaa[m missing def
+[33m21eafd4[m fix disk bug
+[33m3c821bf[m better comment
+[33mb6cac0a[m check preconditions in sched
+[33me7a5b3c[m comment memory barriers
+[33m0b75a8e[m no recursive interrupts
+[33m5a71f93[m debugging rearrangements
+[33mab17e31[m debugging prints
+[33m1542186[m allow long names again
+[33m0517a73[m remove bogus test
+[33m0294e3e[m comments
+[33m19297ca[m fix ide, pit interfaces
+[33m6c8acf9[m check super-long lookups
+[33m0d6bbd3[m clean namei search loop
+[33m7a05459[m fix build bug
+[33m70c3260[m fix pipe bug
+[33mbb207a1[m comments
+[33m52253dc[m remove fstest
+[33m224f659[m refactor syscall code
+[33m31085bb[m more comments
+[33m7e01946[m fix build
+[33ma64cd81[m one regression test program
+[33m1dca3af[m remove _ prefixes
+[33m05a7bbe[m comment fixes
+[33m94d7e25[m avoid system binary clashes
+[33m7678a19[m better page breaks
+[33m44e6909[m more simplifying
+[33me00baa9[m get precedence of <, >, and | right simplify
+[33m1133b21[m more defensive programming
+[33mf701721[m run without lapic and ioapic, if they are not present if no lapic available, use 8253pit for clock now xv6 runs both on qemu (uniprocessor) and bochs (uniprocessor and MP)
+[33mf9bc445[m nit in console interrupts
+[33md6b2025[m fd.c -> file.c
+[33m26dfb4c[m runoff fixes
+[33m2a55cc5[m runoff tweaks
+[33me9d2250[m goodbye lgrind
+[33mf3fc72c[m clean up after mkfs
+[33m0cfc729[m wrap long lines
+[33mdb8fb62[m for vs while
+[33m236d336[m weird spacing
+[33m50e514b[m fd_* => file_*
+[33m9936bff[m fd.* -> file.*
+[33m39593d2[m struct fd -> struct file
+[33m89ebd89[m what is NULL?
+[33m42d5d65[m renumber system calls
+[33m2685309[m split syscall.c into sysfile.c and sysproc.c
+[33m61d03d0[m rm rm
+[33md4c64e5[m writeable => writable
+[33m48b8247[m break single-line if statements
+[33m96d467b[m more named constants
+[33m799c917[m more tabs go away
+[33mf552738[m no /* */ comments
+[33m9e9bcaf[m standardize various * conventions
+[33m03b6376[m standardize on unnamed args in prototypes
+[33mcea3c34[m spacing
+[33ma650c60[m spacing fixes: no tabs, 2-space indents (for rtm)
+[33m45854ca[m print "0" for null string
+[33md90113b[m tweak
+[33m0992df4[m clear np->mem after freeing
+[33m21a88dd[m some pipe support in sh bug in proc_wait
+[33md49a2d5[m nits
+[33m56ac0d7[m change sections and order of files in printout
+[33mfae7779[m New formatting scripts.
+[33ma81e021[m a few nits
+[33m82537b7[m nits
+[33m97c74a3[m nits
+[33m0b6ab84[m don't send keyboard interrupts to the second cpu, if we have only one cpu. xv6 seems to work fine on uniprocessor now.
+[33m7abf49d[m remove duplication don't use the same name for two different pieces of code
+[33m801affc[m centralize credits
+[33m97a5bba[m index for printout some cleanup
+[33m2aa4c3b[m complain if no disk 1 lots of cleanup
+[33m18432ed[m nits
+[33m7a37578[m clear killed flag in exit idecref cwd in exit
+[33mdfcc5b9[m prune unneeded panics and debug output
+[33md7ce654[m better printout
+[33m3b95801[m i broke sbrk, fix it
+[33m2b19190[m clean up stale error checks and panics delete unused functions a few comments
+[33mb52151e[m some text in readme generate postscript printout
+[33m45b6fe7[m remove smallcap version
+[33m03c70cc[m consistently ignore more than 14 chars in path component forbid create or write of existing directory mkdir("d1/d2/d3"), .. should refer to d2, not cwd mkdir increase parent link count
+[33ma6c28c9[m mkdir check error from mknod chdir return -1 if target not a dir
+[33ma84585d[m fstests bugs
+[33m80f292f[m fix writing the indirect block
+[33m5051da6[m inode addrs[NDIRECT] -> NADDRS fix race in mknod / creat use last component in dirent in mknod, not path
+[33m74493bf[m kill user process when it generates an unhandled trap (e.g., 13) fix bug in test code of malloc
+[33m81d5219[m bug in sbrk test malloc
+[33mbcfb84b[m big directory test
+[33m1be7668[m fix bugs in indirect-file code clean up test program
+[33mea2909b[m user-level malloc (untested) nit in sbrk indirect block fix dup to share fd struct
+[33m8b58e81[m i/o redirection in sh better parsing of sh commands (copied from jos sh) cat: read from 1 if no args sbrk system call, but untested getpid system call moved locks in keyboard intr, but why do we get intr w. null characters from keyboard?
+[33mf18ab5c[m compiling, but untested dup
+[33m16083d4[m removed block system call renumber system calls (run gmake clean!) skeleton for dup system call
+[33m8787cd0[m chdir cd in shell nits in mkdir, ls, etc.
+[33mceb0e42[m proc[0] can sleep(), at least after it gets to main00() proc[0] calls iget(rootdev, 1) before forking init
+[33m350e63f[m no more proc[] entry per cpu for idle loop each cpu[] has its own gdt and tss no per-proc gdt or tss, re-write cpu's in scheduler (you win, cliff) main0() switches to cpu[0].mpstack
+[33m69332d1[m oops
+[33me958c53[m commented out code for cwd
+[33md7b3b80[m user-level programs: mkdir and rm shell parses arguments (very simplistic) readme version of README (sh doesn't deal with capital characters) printf recognizes %c nicer output format for ls
+[33mbdb6643[m set size for directories correctly in wdir and mkfs mkdir ls shows stat info for each dir entry
+[33md15f0d1[m start on mkdir stat
+[33me4bcd2a[m wdir now uses readi/writei
+[33m17e3cf1[m fix iget() bug that allocated in-use inode[] entries
+[33m8abe2bc[m don't print unallocated dir entries
+[33m211ff0c[m namei returns locked parent dir inode for create / unlink don't hold fd table lock across idecref() (latter does block i/o) idecref calls iput() in case last ref -> freeing inode dir size is 512 * # blocks, so readi/writei &c work unlink deletes dirent even if ip->nlink > 0
+[33mc372e8d[m zero freed blocks multi-block directories track size of directory (size = number entries in use) should namei (and other code that scans through directories) scan through all blocks of a directory and not use size?
+[33m9e5970d[m link()
+[33m05e9755[m zero out all of dirent.name when creating don't increase length of directory
+[33mcd93074[m LRU disk cache replacement
+[33m22bac2c[m free inode only when noone is holding a pointer to it.  should fix open-unlink- read problem, but untested
+[33m14938f9[m buffer cache, fifo replacement
+[33m7ce01cf[m mknod set nlink = 1 usertests for concurrent create/delete, and read() after unlink()
+[33m4357207[m fix getblk to actually lock the block no more cons_put system calls usertests tests two processes writing files
+[33m1f54484[m fstat primitive ls
+[33m0633b97[m unlink,mknod,create with multi-component pathnames should work now remove console init code from userfs
+[33m24437cd[m fix deadlock---iput(dp) asap working unlink, but doesn't free dir blocks that become empty remove out-of-date comment in ioapic
+[33m17a8565[m init creates console, opens 0/1/2, runs sh sh accepts 0-argument commands (like userfs) reads from console
+[33m5be0039[m interrupts could be recursive since lapic_eoi() called before rti so fast interrupts overflow the kernel stack fix: cli() before lapic_eoi()
+[33m8a8be1b[m low-level keyboard input (not hooked up to /dev yet) fix acquire() to cli() *before* incrementing nlock make T_SYSCALL a trap gate, not an interrupt gate sadly, various crashes if you hold down a keyboard key...
+[33m28d9ef0[m printf convert userfs to use printf bfree ifree writei start on unlink
+[33m939f9ed[m iread for T_DEV O_RDWR, etc. create file
+[33m2601de0[m fix test program: don't close before writing set fd to writeable on open for write
+[33m6fa5ffb[m devsw checkpoint: write(fd,"hello\n",6) where fd is a console dev almost works
+[33m6c0e444[m oops, update directory inode too
+[33m2411139[m block bitmap balloc
+[33m0e84a0e[m fix race in holding() check in acquire() give cpu1 a TSS and gdt for when it enters scheduler() and a pseudo proc[] entry for each cpu cpu0 waits for each other cpu to start up read() for files
+[33me8d11c2[m mknod,ialloc,iupdate
+[33m1042077[m bwrite
+[33m8ec6530[m generalize async read to support write too
+[33m3661892[m nit
+[33mc8b29f6[m better interrupt plan---this one appears to work ioapic
+[33m3263062[m open()
+[33me46fb46[m acquire+release ide_lock in ide_intr
+[33m8455980[m exec arguments
+[33mc59361f[m primitive exec
+[33m54a4b00[m update
+[33m9d3fb67[m namei
+[33m11a9947[m bread iget mkfs makes a file system image put this in your .bochsrc: ata0-slave: type=disk, mode=flat, path="fs.img", cylinders=1024, heads=1, spt=1
+[33m2927081[m uint32_t -> uint &c
+[33mbd228a8[m prevent longjmp / forkret from writing over tf->edi
+[33m0dd4253[m add ide_lock for sleep
+[33mb5f1700[m standarize on unix-like lowercase struct names
+[33me0966f4[m no more cons_putc; real_cons_putc -> cons_putc
+[33mb5ee516[m add uint and standardize on typedefs instead of unsigned
+[33m857d60c[m cleaner
+[33mee9c7f3[m goodbye PushRegs
+[33mf15a3ae[m cleaner
+[33mc54c792[m nitpicks
+[33m564f787[m Eliminate annoying Pseudodesc structure. Eliminate unnecessary parts of mmu.h.
+[33m6e6a1dd[m various little fixes that should have been in earlier checkins
+[33m84d7957[m more idiomatic c
+[33m96e16b9[m no memlayout.h
+[33m9692d5a[m was empty; gone
+[33m8a7eb80[m fix main return type
+[33mb75c11b[m add %s to cprintf for cons_puts
+[33mb74f4b5[m Keep interrupts disabled during startup.
+[33mef2bd07[m standardize on not using foo_ prefix in struct foo
+[33m6b765c4[m rename swtch.S to setjmp.S
+[33mb53f99d[m standardize on #include "foo" not <foo>
+[33m4763a04[m add minimal comments to generator vector table
+[33m679a977[m remove acquire1 and release1
+[33mf3d2902[m add cons_puts for atomic (readable) output
+[33m9b37d1b[m Add user.h for prototypes. Add cons_puts for cleaner output.
+[33mb903b69[m tidy up
+[33m72fef4f[m Don't kill process when inside kernel.
+[33m4ed974f[m more name cleanup
+[33m6f2b626[m remove non-idiomatic increment/decrement
+[33m51716a8[m Rename fd_reference to more suggestive fd_incref. (Fd_reference sounds like it might just return the ref count.)
+[33m856e1fc[m Attempt to clean up newproc somewhat.
+[33m65bd8e1[m New scheduler.
+[33m40a2a08[m Undo change from this morning that wasn't intended to get in.
+[33m643b122[m move everything having to do with proc_table_lock into proc.c
+[33m3497670[m silence load_icode signedness warning
+[33m67a9314[m Add void for ANSI C
+[33m7f419a0[m Change fetchint, fetcharg, and putint to return -1 on error, 0 on success. They had been returning 0 on error, 1 on success, but all the callers were checking for return value < 0.
+[33m46bbd72[m no more recursive locks wakeup1() assumes you hold proc_table_lock sleep(chan, lock) provides atomic sleep-and-release to wait for condition ugly code in swtch/scheduler to implement new sleep fix lots of bugs in pipes, wait, and exit fix bugs if timer interrupt goes off in schedule() console locks per line, not per byte
+[33md9872ff[m and the file
+[33mf27a68a[m extract lapic code from mp.c
+[33m6eb6f10[m passes both usertests exit had acquire where I meant release swtch now checks that you hold no locks
+[33m8148b6e[m i think my cmpxchg use was wrong in acquire nesting cli/sti: release shouldn't always enable interrupts separate setup of lapic from starting of other cpus, so cpu() works earlier flag to disable locking in console output make locks work even when curproc==0 (still crashes in clock interrupt)
+[33m6643247[m cvs add spinlock.h fix race in schedule()
+[33m4e8f237[m no more big kernel lock succeeds at usertests.c pipe test
+[33mb41b38d[m give each cpu its own clock, so that preemption works on cpu 1
+[33mb548df1[m pre-empt both user and kernel, in clock interrupt usertest.c tests pre-emption kill()
+[33m5ce9751[m Changes to allow use of native x86 ELF compilers, which on my Linux 2.4 box using gcc 3.4.6 don't seem to follow the same conventions as the i386-jos-elf-gcc compilers. Can run make 'TOOLPREFIX=' or edit the Makefile.
+[33m7ea6c9d[m queue with disk requests
+[33m084f214[m oops
+[33m72ea69f[m read the disk using interrupts
+[33m7837c71[m disable all interrupts when acquiring lock user program that makes a blocking system call
+[33mb22d898[m timer interrupts disk interrupts (assuming bochs has a bug)
+[33m8b4e2a0[m swtch saves callee-saved registers swtch idles on per-CPU stack, not on calling process's stack fix pipe bugs usertest.c tests pipes, fork, exit, close
+[33mf7cea12[m disable interrupts when holding kernel lock
+[33mbd303ed[m timer interrupts
+[33mc41f1de[m file descriptors pipes
+[33mb61c254[m system call return values initialize 2nd cpu's idt
+[33ma44ee3c[m stick mpstack in cpu structure
+[33mbf39036[m system call arguments
+[33m89eb5fb[m boot more than two CPUs, each on own initial stack
+[33m7df1310[m bug in trapret
+[33mdf5cc91[m compile "user programs" curproc array
+[33mbf49aed[m send console output to parallel port
+[33m8352b99[m oops
+[33m21a88fd[m checkpoint. booting second processor.  stack is messed up, but thanks to cliff and plan 9 code, at least boots and gets into C code.
+[33m7baa34a[m start on MP; detect MP configuration
+[33mae6e8aa[m checkpoint
+[33mbe0a7ea[m sleep, wakeup, wait, exit
+[33ma4c03de[m primitive fork and exit system calls
+[33mcb83c71[m fix some trap bugs
+[33m84eb544[m foo
+[33m0a70d04[m more or less take traps/interrupts
+[33m70a895f[m xx
+[33m55e95b1[m import

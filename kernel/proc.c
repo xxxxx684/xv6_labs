@@ -6,6 +6,7 @@
 #include "proc.h"
 #include "defs.h"
 
+
 struct cpu cpus[NCPU];
 
 struct proc proc[NPROC];
@@ -120,6 +121,16 @@ found:
   p->pid = allocpid();
   p->state = USED;
 
+  // 分配 usyscall 映射页
+  p->usyscall = (struct usyscall *)kalloc();
+  if(p->usyscall == 0){
+    freeproc(p);
+    return 0;
+  }
+  memset(p->usyscall, 0, PGSIZE);
+  p->usyscall->pid = p->pid;  // 设置 pid
+
+
   // Allocate a trapframe page.
   if((p->trapframe = (struct trapframe *)kalloc()) == 0){
     freeproc(p);
@@ -164,6 +175,16 @@ freeproc(struct proc *p)
   p->killed = 0;
   p->xstate = 0;
   p->state = UNUSED;
+  if(p->pagetable){
+    uvmunmap(p->pagetable, USYSCALL, 1, 0); 
+    uvmfree(p->pagetable, p->sz);
+    p->pagetable = 0;
+  }
+
+  if(p->usyscall){
+    kfree((void*)p->usyscall);
+    p->usyscall = 0;
+  }
 }
 
 // Create a user page table for a given process,
@@ -196,6 +217,13 @@ proc_pagetable(struct proc *p)
     return 0;
   }
 
+  // 用户态共享页映射
+  if (mappages(pagetable, USYSCALL, PGSIZE, (uint64)p->usyscall, PTE_R | PTE_U) < 0) {
+    uvmunmap(pagetable, USYSCALL, 1, 0);
+    freewalk(pagetable); 
+    return 0;
+  }
+
   return pagetable;
 }
 
@@ -204,6 +232,7 @@ proc_pagetable(struct proc *p)
 void
 proc_freepagetable(pagetable_t pagetable, uint64 sz)
 {
+  uvmunmap(pagetable, USYSCALL, 1, 0); 
   uvmunmap(pagetable, TRAMPOLINE, 1, 0);
   uvmunmap(pagetable, TRAPFRAME, 1, 0);
   uvmfree(pagetable, sz);
